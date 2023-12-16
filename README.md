@@ -2,7 +2,11 @@
 
 ## Overview
 
-Project 4 uses a combination of Python and Markdown to create a compelling data story using exploratory data analysis in a Jupyter Notebook. The project includes a project virtual environment with  popular libraries for data analytics including pandas, matplotlib, and seaborn.
+Project 4 uses a combination of Python and Markdown
+to create an initial data story in a Jupyter Notebook.
+The project includes a project virtual environment with
+popular libraries for data analytics including pandas, matplotlib, and seaborn,
+and introduces a common process for starting exploratory data analysis projects.
 
 ## Deliverable Names
 
@@ -10,80 +14,189 @@ Project 4 uses a combination of Python and Markdown to create a compelling data 
 - Documentation:      README.md
 - Notebook:           yourname_eda.ipynb
 
-Create a new GitHub repository with a README.md. Create a new Jupyter Notebook with the specified name. Feel free to use a pseudonym or brand name.
+Create a new GitHub repository with a README.md.
+Clone the project down to your machine, open in your favorite IDE,
+and create a new Jupyter Notebook with the specified name.
 
 ### Version Control with Git
 
 Use Git for version control.
-In your README.md, document the steps of  initializing a new project in GitHub, creating a Jupyter Notebook, and managing notebook versions with Git.
-Explain the process for creating the repository in both places,
-and document your workflow and commands as you edit, add, commit, and push to GitHub.
+In your README.md, document the steps of  initializing a new project in GitHub,
+creating a Jupyter Notebook, and managing notebook versions with Git.
+Explain the process for creating the repository in both places, and document
+your workflow and commands as you edit, add, commit, and push to GitHub.
 
 ## Specification
 
 ### Objective
 
-Develop a Jupyter Notebook that demonstrates skills in exploratory data analysis using pandas and seaborn. 
-The notebook should tell a data story, presenting findings in a clear and engaging manner.
+Develop a Jupyter Notebook that demonstrates skills with Jupyter,
+notebooks, working with Python and Markdown cells, and interactive execution.
 
 ### Requirements
 
 #### 1. Environment Setup
 
-Set up a Python virtual environment for the project.
-Document the process and packages used in your README.
-Note your operating system and provide the exact commands and process you used on your machine.
-You do not have to provide commands for other operating systems.
+Create and activate a Python virtual environment for the project.
+Install all required packages into your local project virtual environment.
+After installing the required dependencies,
+redirect the output of the pip freeze command to a requirements.txt file.
+Document the process and commands you used in your README.md.
 
-After installing the required dependencies, redirect the output of the pip freeze command to a requirements.txt file in your root project folder.
+Windows example:
 
-Add a .gitignore file to your project to exclude the virtual environment folder, your .vscode settings folder, and any other files that do not need to be committed to GitHub.
+```Powershell
+py -m venv .venv
+.\.venv\Scripts\Activate.ps1
+py -m pip install jupyterlab pandas matplotlib seaborn
+py -m pip freeze > requirements.txt
+```
 
-#### 2. Set Up Jupyter Notebook
+Mac example:
 
-Document the process of setting up Jupyter Notebook on your machine.
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+python3 -m pip install jupyterlab pandas matplotlib seaborn
+python3 -m pip freeze > requirements.txt
+```
+
+Add a .gitignore file to your project to exclude the virtual environment folder,
+your .vscode settings folder,
+and any other files that do not need to be committed to GitHub.
+
+#### 2. Start Jupyter Notebook
+
+Document the process of starting Jupyter Notebook on your machine.
 Select an appropriate kernel for the notebook.
 
-#### 2. Import Project Packages
+For example, if using VS Code:
 
+1, Install the Jupyter Extension: If not already installed, add the Jupyter extension to VS Code. This extension provides rich support for working with Jupyter notebooks.
+2. Open the Project Folder: Open your project folder in VS Code.
+3. Select the Python Interpreter: From the command palette (Ctrl+Shift+P), select "Python: Select Interpreter" and choose the interpreter from your virtual environment.
+
+Then:
+
+1. Create the Notebook: In the explorer in VS Code, create a new file e.g., yourname_eda.ipynb. Use a .ipynb extension.
+2. Open the Notebook: Double-click the notebook file to open it in the notebook editor.
+3. Add Code and Markdown Cells: Begin adding code cells for your Python code and markdown cells for narrative and explanations.
+
+#### 3. Notebook Opening
+
+Add a Markdown cell at the top of your notebook with a title, author, date and the purpose of the project.
+Add a Python cell next with the import statements for the libraries you will use in the project.
 Organize your project imports following conventions.
-For example, standard library imports first, then external library imports, then local module imports.
 
-#### 3. Gather Data
+#### 4. Gather Data
 
-Use the requests library to fetch data from specified web APIs or online data sources - or use data sets available in the seaborn or other imported libraries.
+Use the Iris dataset available in the Seaborn library. The Iris dataset is a well-known dataset in data science and machine learning, often used for various classification tasks and basic data exploration.
 
-#### 4. Data Analysis with Pandas
+For example:
 
-Use pandas to load, clean, and manipulate the dataset.
-Perform exploratory data analysis to uncover trends and patterns.
+```python
+import seaborn as sns
+import pandas as pd
 
-#### 5. Data Visualization with Seaborn
+# Load the Iris dataset into DataFrame
+df = sns.load_dataset('iris')
 
-Use seaborn to create visualizations that aid in telling your data story.
-Include a variety of chart types to showcase different aspects of the data.
+# Inspect first rows of the DataFrame
+print(df.head())
+```
 
-#### 6. Notebook Structure and Documentation
+#### 5. Basic Data Exploration
 
-Organize your notebook into sections with clear headers.
-Include markdown cells to explain your analysis and findings.
-Comment your code cells for clarity.
+First, use pandas to perform the basic data exploration tasks as the initial steps of
+any data analysis project.
 
-#### 7. Storytelling and Presentation
+Step 1. Load Data into DataFrame
 
-Craft a narrative around your data analysis.
+Load the data into a pandas DataFrame.
+Use the pd read functions such as pd.read_csv() or pd.read_excel() as appropriate.
+
+Step 2. Inspect Data w/head(), shape, and dtypes
+
+Display the first 10 rows of the DataFrame, check the shape, and display the data types of each column using df.head(10), df.shape, and df.dtypes.
+
+Step 3. Describe Summary Statistics
+
+Use the DataFrame describe() method to display summary statistics for each column.
+
+Step 4. Display Histograms for Numeric Columns
+
+Choose a numerical column and use df['column_name'].hist() to plot a histogram for that specific column.
+
+For example:
+
+```python
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Load data into DataFrame
+df = sns.load_dataset('iris')
+
+# Inspect data with head(), shape, and dtypes
+print(df.head(10))
+print(df.shape)
+print(df.dtypes)
+
+# Describe summary statistics
+print(df.describe())
+
+# Inspect histograms for numerical columns
+df['column_name'].hist()
+plt.show()
+```
+
+#### 6. Data Transformation
+
+Use pandas and other tools to perform transformations as needed.
+Transformation may include renaming columns, adding new columns,
+or transforming existing data for more in-depth analysis.
+For example:
+
+```python
+# Renaming a column
+df.rename(columns={'sepal_length': 'Sepal Length'}, inplace=True)
+
+# Adding a new column
+df['Sepal Area'] = df['Sepal Length'] * df['sepal_width']
+```
+
+#### 7. Data Visualization
+
+Create a variety of chart types using seaborn and matplotlib to showcase different aspects of the data.
+There is a guided example in the resources section at the end of this document.
+For example:
+
+```python
+sns.pairplot(df, hue='species')
+plt.show()
+```
+
+#### 8. Storytelling and Presentation
+
+Interpret the visualizations and statistics to craft a narrative around your findings.
 Present your findings in a logical and engaging manner.
-
-### Notebook Execution
-
-Execute the notebook and ensure it runs without errors before committing and pushing your final version to GitHub.
-Verify it renders correctly when viewed on GitHub.
 
 ### Notebook Design
 
-- Include a project summary at the top of the notebook with a title, author, date and the purpose of the project.
-- The code and presentation should be clear, well-organized, and demonstrate good practices.
-- Include Markdown section headings and comments for clarity.
+- Begin your notebook with a project summary including the title, author, date, and project's purpose. This provides an immediate understanding of the notebook's objective.
+- Ensure your code and presentation are neat, well-organized, and follow good coding practices. This includes proper variable naming, consistent code style, and logical organization of code cells.
+- Use Markdown features effectively for formatting, such as section headings, bullet points, and emphasis (bold/italic), to enhance readability.
+
+### Notebook Structure and Documentation
+
+Once the notebook runs without errors, focus on how the notebook content is structured and documented.
+Organize your notebook into well-defined sections, each with a clear purpose and header.
+Use Markdown cells to provide context, explain your analysis, and share findings. This makes your notebook informative and engaging.
+Comment your code cells to explain the purpose and functionality of the code. This is especially important for complex or non-obvious code segments.
+
+### Notebook Execution
+
+Run your notebook entirely to ensure it executes without errors. This includes checking all code cells and ensuring all data visualizations render as expected.
+Confirm that your notebook renders correctly on GitHub after pushing, as this ensures your work is viewable by others.
 
 ### Evaluation Criteria
 
@@ -93,3 +206,10 @@ Verify it renders correctly when viewed on GitHub.
 - Professionalism: The project should be submitted on-time and reflect an original, creative effort.
 
 See rubric for additional information.
+
+### Resources
+
+- See [JUPYTER.md](JUPYTER.md) for Jupyter Notebook keyboard shortcuts and recommendations.
+- See [MARKDOWN.md](MARKDOWN.md) for Markdown syntax and recommendations.
+- See [Plotting graph For IRIS Dataset Using Seaborn And Matplotlib](https://www.tutorialspoint.com/plotting-graph-for-iris-dataset-using-seaborn-and-matplotlib)
+- See [Seaborn Tutorial](https://seaborn.pydata.org/tutorial.html)
