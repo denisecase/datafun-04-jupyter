@@ -6,7 +6,7 @@ Project 4 uses a combination of Python and Markdown to create a compelling data 
 
 ## Deliverable Names
 
-- GitHub Repository:  datafun-03-jupyter
+- GitHub Repository:  datafun-04-jupyter
 - Documentation:      README.md
 - Notebook:           yourname_eda.ipynb
 
@@ -19,7 +19,7 @@ In your README.md, document the steps of  initializing a new project in GitHub, 
 Explain the process for creating the repository in both places,
 and document your workflow and commands as you edit, add, commit, and push to GitHub.
 
-## Module Specification
+## Specification
 
 ### Objective
 
@@ -34,6 +34,8 @@ Set up a Python virtual environment for the project.
 Document the process and packages used in your README.
 Note your operating system and provide the exact commands and process you used on your machine.
 You do not have to provide commands for other operating systems.
+
+After installing the required dependencies, redirect the output of the pip freeze command to a requirements.txt file in your root project folder.
 
 Add a .gitignore file to your project to exclude the virtual environment folder, your .vscode settings folder, and any other files that do not need to be committed to GitHub.
 
