@@ -37,11 +37,11 @@ notebooks, working with Python and Markdown cells, and interactive execution.
 
 #### 1. Environment Setup
 
-Create and activate a Python virtual environment for the project.
-Install all required packages into your local project virtual environment.
-After installing the required dependencies,
-redirect the output of the pip freeze command to a requirements.txt file.
-Document the process and commands you used in your README.md.
+1. Create and activate a project virtual environment.
+1. Install all required packages into your local project virtual environment.
+1. After installing the required dependencies, generate a requirements.txt file.
+1. Document the process and commands you used in your README.md.
+1. Add a .gitignore file to your project with useful entries.
 
 Windows example:
 
@@ -61,34 +61,29 @@ python3 -m pip install jupyterlab pandas matplotlib seaborn
 python3 -m pip freeze > requirements.txt
 ```
 
-Add a .gitignore file to your project to exclude the virtual environment folder,
-your .vscode settings folder,
-and any other files that do not need to be committed to GitHub.
+#### 2. Project Start
 
-#### 2. Start Jupyter Notebook
+Make sure Jupyter is installed and working in your project virtual environment.
+Document the process and commands you used in your README.md.
 
-Document the process of starting Jupyter Notebook on your machine.
-Select an appropriate kernel for the notebook.
-
-For example, if using VS Code:
+For example, set up Jupyter using VS Code:
 
 1, Install the Jupyter Extension: If not already installed, add the Jupyter extension to VS Code. This extension provides rich support for working with Jupyter notebooks.
 2. Open the Project Folder: Open your project folder in VS Code.
 3. Select the Python Interpreter: From the command palette (Ctrl+Shift+P), select "Python: Select Interpreter" and choose the interpreter from your virtual environment.
 
-Then:
+Then create, open, and start a new notebook:
 
-1. Create the Notebook: In the explorer in VS Code, create a new file e.g., yourname_eda.ipynb. Use a .ipynb extension.
+1. Create the Notebook: In the VS Code Explorer, create a new file e.g., yourname_eda.ipynb. Ensure it has a .ipynb extension.
 2. Open the Notebook: Double-click the notebook file to open it in the notebook editor.
-3. Add Code and Markdown Cells: Begin adding code cells for your Python code and markdown cells for narrative and explanations.
+3. Add a Markdown cell at the top of your notebook with a title, author, date and the purpose of the project.
 
-#### 3. Notebook Opening
+#### 3. Import Dependencies
 
-Add a Markdown cell at the top of your notebook with a title, author, date and the purpose of the project.
 Add a Python cell next with the import statements for the libraries you will use in the project.
 Organize your project imports following conventions.
 
-#### 4. Gather Data
+#### 4.  Data Acquisition
 
 Use the Iris dataset available in the Seaborn library. The Iris dataset is a well-known dataset in data science and machine learning, often used for various classification tasks and basic data exploration.
 
