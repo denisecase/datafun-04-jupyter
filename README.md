@@ -18,7 +18,7 @@ Create a new GitHub repository with a README.md.
 Clone the project down to your machine, open in your favorite IDE,
 and create a new Jupyter Notebook with the specified name.
 
-### Version Control with Git
+## Version Control with Git
 
 Use Git for version control.
 In your README.md, document the steps of  initializing a new project in GitHub,
@@ -26,16 +26,14 @@ creating a Jupyter Notebook, and managing notebook versions with Git.
 Explain the process for creating the repository in both places, and document
 your workflow and commands as you edit, add, commit, and push to GitHub.
 
-## Specification
-
-### Objective
+## Objective
 
 Develop a Jupyter Notebook that demonstrates skills with Jupyter,
 notebooks, working with Python and Markdown cells, and interactive execution.
 
-### Requirements
+## Requirements
 
-#### 1. Environment Setup
+### 1. Environment Setup
 
 1. Create and activate a project virtual environment.
 1. Install all required packages into your local project virtual environment.
@@ -61,7 +59,7 @@ python3 -m pip install jupyterlab pandas matplotlib seaborn
 python3 -m pip freeze > requirements.txt
 ```
 
-#### 2. Project Start
+### 2. Project Start
 
 Make sure Jupyter is installed and working in your project virtual environment.
 Document the process and commands you used in your README.md.
@@ -78,12 +76,12 @@ Then create, open, and start a new notebook:
 2. Open the Notebook: Double-click the notebook file to open it in the notebook editor.
 3. Add a Markdown cell at the top of your notebook with a title, author, date and the purpose of the project.
 
-#### 3. Import Dependencies
+### 3. Import Dependencies
 
 Add a Python cell next with the import statements for the libraries you will use in the project.
 Organize your project imports following conventions.
 
-#### 4.  Data Acquisition
+### 4.  Data Acquisition
 
 Use the Iris dataset available in the Seaborn library. The Iris dataset is a well-known dataset in data science and machine learning, often used for various classification tasks and basic data exploration.
 
@@ -100,7 +98,7 @@ df = sns.load_dataset('iris')
 print(df.head())
 ```
 
-#### 5. Basic Data Exploration
+### 5. Basic Data Exploration
 
 First, use pandas to perform the basic data exploration tasks as the initial steps of
 any data analysis project.
@@ -144,7 +142,7 @@ df['column_name'].hist()
 plt.show()
 ```
 
-#### 6. Data Transformation
+### 6. Data Transformation
 
 Use pandas and other tools to perform transformations as needed.
 Transformation may include renaming columns, adding new columns,
@@ -159,7 +157,7 @@ df.rename(columns={'sepal_length': 'Sepal Length'}, inplace=True)
 df['Sepal Area'] = df['Sepal Length'] * df['sepal_width']
 ```
 
-#### 7. Data Visualization
+### 7. Data Visualization
 
 Create a variety of chart types using seaborn and matplotlib to showcase different aspects of the data.
 There is a guided example in the resources section at the end of this document.
@@ -170,30 +168,30 @@ sns.pairplot(df, hue='species')
 plt.show()
 ```
 
-#### 8. Storytelling and Presentation
+### 8. Storytelling and Presentation
 
 Interpret the visualizations and statistics to craft a narrative around your findings.
 Present your findings in a logical and engaging manner.
 
-### Notebook Design
+## Notebook Design
 
 - Begin your notebook with a project summary including the title, author, date, and project's purpose. This provides an immediate understanding of the notebook's objective.
 - Ensure your code and presentation are neat, well-organized, and follow good coding practices. This includes proper variable naming, consistent code style, and logical organization of code cells.
 - Use Markdown features effectively for formatting, such as section headings, bullet points, and emphasis (bold/italic), to enhance readability.
 
-### Notebook Structure and Documentation
+## Notebook Structure and Documentation
 
 Once the notebook runs without errors, focus on how the notebook content is structured and documented.
 Organize your notebook into well-defined sections, each with a clear purpose and header.
 Use Markdown cells to provide context, explain your analysis, and share findings. This makes your notebook informative and engaging.
 Comment your code cells to explain the purpose and functionality of the code. This is especially important for complex or non-obvious code segments.
 
-### Notebook Execution
+## Notebook Execution
 
 Run your notebook entirely to ensure it executes without errors. This includes checking all code cells and ensuring all data visualizations render as expected.
 Confirm that your notebook renders correctly on GitHub after pushing, as this ensures your work is viewable by others.
 
-### Evaluation Criteria
+## Evaluation Criteria
 
 - Functionality: The project should be functional and meet all requirements.
 - Documentation: The project should be well-written and well-documented.
@@ -202,7 +200,7 @@ Confirm that your notebook renders correctly on GitHub after pushing, as this en
 
 See rubric for additional information.
 
-### Resources
+## Resources
 
 - See [JUPYTER.md](JUPYTER.md) for Jupyter Notebook keyboard shortcuts and recommendations.
 - See [MARKDOWN.md](MARKDOWN.md) for Markdown syntax and recommendations.
