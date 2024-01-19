@@ -14,32 +14,34 @@ and introduces a common process for starting exploratory data analysis projects.
 - Documentation:      README.md
 - Notebook:           **yourname_eda.ipynb**
 
-Create a new GitHub repository with a README.md.
-Clone the project down to your machine, open in your favorite IDE,
-and create a new Jupyter Notebook with the specified name.
+## External Dependencies
+
+This project requires the following external modules, so a virtual environment is recommended.
+
+- pandas
+- matplotlib
+- seaborn
 
 ## Version Control with Git
 
-Use Git for version control.
-In your README.md, document the steps of  initializing a new project in GitHub,
-creating a Jupyter Notebook, and managing notebook versions with Git.
-Explain the process for creating the repository in both places, and document
-your workflow and commands as you edit, add, commit, and push to GitHub.
+- Create a new GitHub repository named `datafun-04-jupyter`.
+- Clone the repository to your local machine.
+- Document the steps and commands in your README.md.
+- Document your workflow and commands as you edit, add, commit, and push changes to the GitHub repository.
 
 ## Objective
 
-Develop a Jupyter Notebook that demonstrates skills with Jupyter,
-notebooks, working with Python and Markdown cells, and interactive execution.
+Develop a Jupyter Notebook that demonstrates skills with Jupyter and guided exploratory data analysis.
 
 ## Requirements
 
 ### 1. Environment Setup
 
-1. Create and activate a project virtual environment.
+1. **Create** and **activate** the project virtual environment.
 1. Install all required packages into your local project virtual environment.
-1. After installing the required dependencies, update or generate your requirements.txt file.
-1. Document the process and commands you used in your README.md.
-1. Add a .gitignore file to your project with useful entries.
+1. After installing the required dependencies, update or generate a  **requirements.txt** file.
+1. Add a **.gitignore** file to your project with useful entries.
+1. Document the steps and commands in your README.md.
 
 Windows example:
 
@@ -81,16 +83,27 @@ Then create, open, and start a new notebook:
 Add a Python cell next with the import statements for the libraries you will use in the project.
 Organize your project imports following conventions.
 
-### 4.  Data Acquisition
+```python
+import matplotlib.pyplot as plt
+import pandas as pd
+import seaborn as sns
+```
 
-Use the Iris dataset available in the Seaborn library. The Iris dataset is a well-known dataset in data science and machine learning, often used for various classification tasks and basic data exploration.
+### 4.  Exploratory Data Analysis
 
+Perform exploratory data analysis (EDA) using pandas and other tools as needed.
+We will use the Seaborn library to load the Iris dataset.
+Review the dataset here: [iris.csv](https://raw.githubusercontent.com/plotly/datasets/master/iris.csv) or see the local copy provided [iris.csv](iris.csv).
+
+#### Step 1. Data Acquisition
+
+Use the Iris dataset available in the Seaborn library.
+The Iris dataset is a well-known dataset in data science and machine learning, often used for various classification tasks and basic data exploration.
+Load the data into a pandas DataFrame.
+Use the pd read functions such as pd.read_csv() or pd.read_excel() as appropriate.
 For example:
 
 ```python
-import seaborn as sns
-import pandas as pd
-
 # Load the Iris dataset into DataFrame
 df = sns.load_dataset('iris')
 
@@ -98,51 +111,70 @@ df = sns.load_dataset('iris')
 print(df.head())
 ```
 
-### 5. Basic Data Exploration
-
-First, use pandas to perform the basic data exploration tasks as the initial steps of
-any data analysis project.
-
-Step 1. Load Data into DataFrame
-
-Load the data into a pandas DataFrame.
-Use the pd read functions such as pd.read_csv() or pd.read_excel() as appropriate.
-
-Step 2. Inspect Data w/head(), shape, and dtypes
+#### Step 2. Initial Data Inspection
 
 Display the first 10 rows of the DataFrame, check the shape, and display the data types of each column using df.head(10), df.shape, and df.dtypes.
-
-Step 3. Describe Summary Statistics
-
-Use the DataFrame describe() method to display summary statistics for each column.
-
-Step 4. Display Histograms for Numeric Columns
-
-Choose a numerical column and use df['column_name'].hist() to plot a histogram for that specific column.
-
 For example:
 
 ```python
-import pandas as pd
-import matplotlib.pyplot as plt
 
-# Load data into DataFrame
-df = sns.load_dataset('iris')
-
-# Inspect data with head(), shape, and dtypes
 print(df.head(10))
 print(df.shape)
 print(df.dtypes)
+```
 
-# Describe summary statistics
+#### Step 3. Initial Descriptive Statistics
+
+Use the DataFrame describe() method to display summary statistics for each column.
+For example:
+
+```python
 print(df.describe())
+```
 
-# Inspect histograms for numerical columns
-df['column_name'].hist()
+#### Step 4. Initial Data Distribution for Numerical Columns
+
+Choose a numerical column and use df['column_name'].hist() to plot a histogram for that specific column.
+To show all the histograms for all numerical columns, use df.hist().
+For example:
+
+```python
+# Inspect histogram by numerical column
+df['sepal_length'].hist()
+
+# Inspect histograms for all numerical columns
+df.hist()
+
+# Show all plots
 plt.show()
 ```
 
-### 6. Data Transformation
+Afterwards, use a Markdown cell to document your observations.
+
+#### Step 5. Initial Data Distribution for Categorical Columns
+
+Choose a categorical column and use df['column_name'].value_counts() to display the count of each category.
+Use a loop to show the value counts for **all** categorical columns.
+For example:
+
+```python
+# Inspect value counts by categorical column
+df['species'].value_counts()
+
+# Inspect value counts for all categorical columns
+for col in df.select_dtypes(include=['object', 'category']).columns:
+    # Display count plot
+    sns.countplot(x=col, data=df)
+    plt.title(f'Distribution of {col}')
+    plt.show()
+
+# Show all plots
+plt.show()
+```
+
+Afterwards, use a Markdown cell to document your observations.
+
+#### Step 6. Initial Data Transformation and Feature Engineering
 
 Use pandas and other tools to perform transformations as needed.
 Transformation may include renaming columns, adding new columns,
@@ -157,7 +189,7 @@ df.rename(columns={'sepal_length': 'Sepal Length'}, inplace=True)
 df['Sepal Area'] = df['Sepal Length'] * df['sepal_width']
 ```
 
-### 7. Data Visualization
+#### Step 7. Initial Visualizations
 
 Create a variety of chart types using seaborn and matplotlib to showcase different aspects of the data.
 There is a guided example in the resources section at the end of this document.
@@ -168,9 +200,13 @@ sns.pairplot(df, hue='species')
 plt.show()
 ```
 
-### 8. Storytelling and Presentation
+After each visualization, use Markdown cells to document your observations and insights.
 
-Interpret the visualizations and statistics to craft a narrative around your findings.
+#### Step 8. Initial Storytelling and Presentation
+
+Present your notebook with an opening that introduces yourself and your topic.
+Use Markdown section headings to introduce each step.
+Interpret the visualizations and statistics to narrate a clear and compelling data story.
 Present your findings in a logical and engaging manner.
 
 ## Notebook Design
