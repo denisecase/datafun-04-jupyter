@@ -101,6 +101,7 @@ Use the Iris dataset available in the Seaborn library.
 The Iris dataset is a well-known dataset in data science and machine learning, often used for various classification tasks and basic data exploration.
 Load the data into a pandas DataFrame.
 Use the pd read functions such as pd.read_csv() or pd.read_excel() as appropriate.
+To read from the Seaborn dataset, we'll use sns.load_dataset() function and pass in the 'iris' (the name without .csv) to populate our DataFrame.
 For example:
 
 ```python
