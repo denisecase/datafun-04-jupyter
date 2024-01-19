@@ -10,9 +10,9 @@ and introduces a common process for starting exploratory data analysis projects.
 
 ## Deliverable Names
 
-- GitHub Repository:  datafun-04-jupyter
+- GitHub Repository:  **datafun-04-jupyter**
 - Documentation:      README.md
-- Notebook:           yourname_eda.ipynb
+- Notebook:           **yourname_eda.ipynb**
 
 Create a new GitHub repository with a README.md.
 Clone the project down to your machine, open in your favorite IDE,
@@ -37,7 +37,7 @@ notebooks, working with Python and Markdown cells, and interactive execution.
 
 1. Create and activate a project virtual environment.
 1. Install all required packages into your local project virtual environment.
-1. After installing the required dependencies, generate a requirements.txt file.
+1. After installing the required dependencies, update or generate your requirements.txt file.
 1. Document the process and commands you used in your README.md.
 1. Add a .gitignore file to your project with useful entries.
 
@@ -66,7 +66,7 @@ Document the process and commands you used in your README.md.
 
 For example, set up Jupyter using VS Code:
 
-1, Install the Jupyter Extension: If not already installed, add the Jupyter extension to VS Code. This extension provides rich support for working with Jupyter notebooks.
+1. Install the Jupyter Extension: If not already installed, add the Jupyter extension to VS Code. This extension provides rich support for working with Jupyter notebooks.
 2. Open the Project Folder: Open your project folder in VS Code.
 3. Select the Python Interpreter: From the command palette (Ctrl+Shift+P), select "Python: Select Interpreter" and choose the interpreter from your virtual environment.
 
