@@ -40,7 +40,7 @@ Develop a Jupyter Notebook that demonstrates skills with Jupyter and guided expl
 1. **Create** and **activate** the project virtual environment.
 1. Install all required packages into your local project virtual environment.
 1. After installing the required dependencies, update or generate a  **requirements.txt** file.
-1. Add a **.gitignore** file to your project with useful entries.
+1. Add a **.gitignore** file to your project with useful entries. See [.gitignore](.gitignore) example.
 1. Document the steps and commands in your README.md.
 
 Windows example:
