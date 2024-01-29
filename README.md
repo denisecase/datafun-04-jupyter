@@ -66,16 +66,16 @@ python3 -m pip freeze > requirements.txt
 Make sure Jupyter is installed and working in your project virtual environment.
 Document the process and commands you used in your README.md.
 
-For example, set up Jupyter using VS Code:
+For example, to set up Jupyter using **VS Code**:
 
 1. Install the Jupyter Extension: If not already installed, add the Jupyter extension to VS Code. This extension provides rich support for working with Jupyter notebooks.
-2. Open the Project Folder: Open your project folder in VS Code.
+2. Open the Project Folder: Open your root project repository folder in VS Code. (Usually in your Documents folder.)
 3. Select the Python Interpreter: From the command palette (Ctrl+Shift+P), select "Python: Select Interpreter" and choose the interpreter from your virtual environment.
 
-Then create, open, and start a new notebook:
+Then create, open, and start a new notebook in your root project repository folder:
 
-1. Create the Notebook: In the VS Code Explorer, create a new file e.g., yourname_eda.ipynb. Ensure it has a .ipynb extension.
-2. Open the Notebook: Double-click the notebook file to open it in the notebook editor.
+1. Create the Notebook: In the VS Code Explorer, create a new file i.e., yourname_eda.ipynb. Ensure it has a .ipynb extension.
+2. Verify your new notebook is open for editing. If needed, view the project files in VS Code Explorer and double-click the notebook file to open it for editing.
 3. Add a Markdown cell at the top of your notebook with a title, author, date and the purpose of the project.
 
 ### 3. Import Dependencies
@@ -88,6 +88,9 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import seaborn as sns
 ```
+Execute the cell to ensure everything works. 
+If you get errors on one of the statements above, the most common issue is that package has not been installed into the active project virtual environment.
+When you find you need a new package, first install it into the active project virtual environment and then import it near the top of your Python or Notebook file. 
 
 ### 4.  Exploratory Data Analysis
 
