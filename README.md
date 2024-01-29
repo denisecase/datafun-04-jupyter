@@ -43,7 +43,7 @@ Develop a Jupyter Notebook that demonstrates skills with Jupyter and guided expl
 1. Add a **.gitignore** file to your project with useful entries. See [.gitignore](.gitignore) example.
 1. Document the steps and commands in your README.md.
 
-Windows example:
+Terminal Commands: Windows example - record your process in your README:
 
 ```Powershell
 py -m venv .venv
@@ -52,7 +52,7 @@ py -m pip install jupyterlab pandas matplotlib seaborn
 py -m pip freeze > requirements.txt
 ```
 
-Mac example:
+Terminal Commands: Mac example - record your process in your README:
 
 ```bash
 python3 -m venv .venv
@@ -83,6 +83,8 @@ Then create, open, and start a new notebook in your root project repository fold
 Add a Python cell next with the import statements for the libraries you will use in the project.
 Organize your project imports following conventions.
 
+Jupyter Notebook / Python cell example:
+
 ```python
 import matplotlib.pyplot as plt
 import pandas as pd
@@ -105,7 +107,8 @@ The Iris dataset is a well-known dataset in data science and machine learning, o
 Load the data into a pandas DataFrame.
 Use the pd read functions such as pd.read_csv() or pd.read_excel() as appropriate.
 To read from the Seaborn dataset, we'll use sns.load_dataset() function and pass in the 'iris' (the name without .csv) to populate our DataFrame.
-For example:
+
+Jupyter Notebook / Python cell example:
 
 ```python
 # Load the Iris dataset into DataFrame
@@ -118,7 +121,8 @@ print(df.head())
 #### Step 2. Initial Data Inspection
 
 Display the first 10 rows of the DataFrame, check the shape, and display the data types of each column using df.head(10), df.shape, and df.dtypes.
-For example:
+
+Jupyter Notebook / Python cell example:
 
 ```python
 
@@ -130,7 +134,8 @@ print(df.dtypes)
 #### Step 3. Initial Descriptive Statistics
 
 Use the DataFrame describe() method to display summary statistics for each column.
-For example:
+
+Jupyter Notebook / Python cell example:
 
 ```python
 print(df.describe())
@@ -140,7 +145,8 @@ print(df.describe())
 
 Choose a numerical column and use df['column_name'].hist() to plot a histogram for that specific column.
 To show all the histograms for all numerical columns, use df.hist().
-For example:
+
+Jupyter Notebook / Python cell example:
 
 ```python
 # Inspect histogram by numerical column
@@ -159,7 +165,8 @@ Afterwards, use a Markdown cell to document your observations.
 
 Choose a categorical column and use df['column_name'].value_counts() to display the count of each category.
 Use a loop to show the value counts for **all** categorical columns.
-For example:
+
+Jupyter Notebook / Python cell example:
 
 ```python
 # Inspect value counts by categorical column
@@ -183,7 +190,8 @@ Afterwards, use a Markdown cell to document your observations.
 Use pandas and other tools to perform transformations as needed.
 Transformation may include renaming columns, adding new columns,
 or transforming existing data for more in-depth analysis.
-For example:
+
+Jupyter Notebook / Python cell example:
 
 ```python
 # Renaming a column
@@ -197,7 +205,8 @@ df['Sepal Area'] = df['Sepal Length'] * df['sepal_width']
 
 Create a variety of chart types using seaborn and matplotlib to showcase different aspects of the data.
 There is a guided example in the resources section at the end of this document.
-For example:
+
+Jupyter Notebook / Python cell example:
 
 ```python
 sns.pairplot(df, hue='species')
