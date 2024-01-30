@@ -76,12 +76,14 @@ Then create, open, and start a new notebook in your root project repository fold
 
 1. Create the Notebook: In the VS Code Explorer, create a new file i.e., yourname_eda.ipynb. Ensure it has a .ipynb extension.
 2. Verify your new notebook is open for editing. If needed, view the project files in VS Code Explorer and double-click the notebook file to open it for editing.
-3. Add a Markdown cell at the top of your notebook with a title, author, date and the purpose of the project.
+3. Add a Markdown cell at the top of your notebook with the introduction (include the title, author, date and the purpose of the project).
 
-### 3. Import Dependencies
+### 3. Import Dependencies (At the Top, After the Introduction)
 
 Add a Python cell next with the import statements for the libraries you will use in the project.
-Organize your project imports following conventions.
+Follow conventional package import organization and alias. 
+Import each package just once near the top of the file. 
+Be sure you have INSTALLED any external packages (outside the Python Standard Library) into your active project virtual environment first.
 
 Jupyter Notebook / Python cell example:
 
