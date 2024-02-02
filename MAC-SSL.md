@@ -1,7 +1,7 @@
 # MAC-SSL.md
 
 Seaborn fetches datasets from the web.
-Newer Macs don't have the required SSL Certificate functionaliy installed by default.
+Newer Macs don't have the required SSL Certificate functionality installed by default.
 There is a post-installation process that must be run.
 
 ## Install Certificates: After Python Installation
