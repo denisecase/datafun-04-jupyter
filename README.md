@@ -263,4 +263,4 @@ See rubric for additional information.
 Seaborn fetches datasets from the web.
 Newer Macs don't have the required SSL Certificate functionaliy installed by default.
 There is a post-installation process that must be run.
-For more information see: [MACS.md](MACS.md).
+For more information see: [MAC-SSL.md](MAC-SSL.md).
