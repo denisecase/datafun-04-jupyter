@@ -1,4 +1,4 @@
-# MACS.md
+# MAC-SSL.md
 
 Seaborn fetches datasets from the web.
 Newer Macs don't have the required SSL Certificate functionaliy installed by default.
