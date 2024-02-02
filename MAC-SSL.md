@@ -17,7 +17,7 @@ After a Python installation, it tells us there is one more step to set things up
 
 ## Install Certifications: As Needed
 
-If we didn't run the command when we installed Pythoh,
+If we didn't run the command when we installed Python,
 we can run it as needed.
 Open the Python folder in Finder and find the "Install Certifications.command" file. 
 
