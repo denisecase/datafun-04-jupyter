@@ -257,3 +257,10 @@ See rubric for additional information.
 - See [MARKDOWN.md](MARKDOWN.md) for Markdown syntax and recommendations.
 - See [Plotting graph For IRIS Dataset Using Seaborn And Matplotlib](https://www.tutorialspoint.com/plotting-graph-for-iris-dataset-using-seaborn-and-matplotlib)
 - See [Seaborn Tutorial](https://seaborn.pydata.org/tutorial.html)
+
+## Troubleshooting Mac SSL Certificate Error
+
+Seaborn fetches datasets from the web.
+Newer Macs don't have the required SSL Certificate functionaliy installed by default.
+There is a post-installation process that must be run.
+For more information see: [MACS.md](MACS.md).
