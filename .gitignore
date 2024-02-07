@@ -15,6 +15,6 @@ __pycache__/
 # Editor backup files
 *~
 
-# Jupyter Notebook checkpoints and runtime files
+# Python Jupyter Notebook checkpoints and runtime files
 .ipynb_checkpoints/
 *.ipynb_meta/
