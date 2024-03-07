@@ -18,6 +18,7 @@ and introduces a common process for starting exploratory data analysis projects.
 
 This project requires the following external modules, so a virtual environment is recommended.
 
+- jupyterlab
 - pandas
 - matplotlib
 - seaborn
