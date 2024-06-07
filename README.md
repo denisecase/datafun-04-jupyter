@@ -29,12 +29,13 @@ Follow this common workflow to start a new project.
 
 ## External Dependencies
 
-This project requires at least the following external modules, so a virtual environment is recommended.
+This project requires at least the following external modules, so a local project virtual environment is recommended.
 
-- jupyterlab
-- pandas
-- matplotlib
-- seaborn
+- jupyterlab: Enables Jupyter notebooks.
+- pandas: Handles data manipulation and analysis, focusing on structured (tabular/panel) data.
+- pyarrow: Required by pandas; facilitates interaction between pandas and the Arrow format.
+- matplotlib: Basic tools for plotting and visualizing data.
+- seaborn: Simplifies complex visualizations and statistical plots, built on matplotlib.
 
 ## Objective
 
