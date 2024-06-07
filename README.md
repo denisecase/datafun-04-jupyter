@@ -14,21 +14,27 @@ and introduces a common process for starting exploratory data analysis projects.
 - Documentation:      README.md
 - Notebook:           **yourname_eda.ipynb**
 
+## Start a New Project
+
+Follow this common workflow to start a new project.
+
+1. In your browser, create a GitHub project repository with a default README.md. Name the repo as specified above.
+2. Clone your new repository down to your machine into your Documents folder.
+3. Open your new project repository folder in the Documents folder of your machine in VS Code (if you haven't already).
+4. In VS Code, add a useful .gitignore file with a line for .vsode/ and .venv/ and whatever else doesn't need to be tracked in the repository.
+5. In VS Code, edit your README.md to record your commands, process, and notes so far.
+6. In VS Code, open a terminal - PowerShell if Windows, zsh or bash if Mac/Linux.
+7. Use the terminal to git add your files and folders to source control, and git commit your changes with a useful message (e.g. "initial commit"), and git push the changes up to GitHub.
+8. Verify your GitHub repository.
+
 ## External Dependencies
 
-This project requires the following external modules, so a virtual environment is recommended.
+This project requires at least the following external modules, so a virtual environment is recommended.
 
 - jupyterlab
 - pandas
 - matplotlib
 - seaborn
-
-## Version Control with Git
-
-- Create a new GitHub repository named `datafun-04-jupyter`.
-- Clone the repository to your local machine.
-- Document the steps and commands in your README.md.
-- Document your workflow and commands as you edit, add, commit, and push changes to the GitHub repository.
 
 ## Objective
 
@@ -36,31 +42,13 @@ Develop a Jupyter Notebook that demonstrates skills with Jupyter and guided expl
 
 ## Requirements
 
-### 1. Environment Setup
+### 1. Create and Manage Project Virtual Environment
 
-1. **Create** and **activate** the project virtual environment.
-1. Install all required packages into your local project virtual environment.
-1. After installing the required dependencies, update or generate a  **requirements.txt** file.
-1. Add a **.gitignore** file to your project with useful entries. See [.gitignore](.gitignore) example.
-1. Document the steps and commands in your README.md.
-
-Terminal Commands: Windows example - record your process in your README:
-
-```Powershell
-py -m venv .venv
-.\.venv\Scripts\Activate.ps1
-py -m pip install jupyterlab pandas matplotlib seaborn
-py -m pip freeze > requirements.txt
-```
-
-Terminal Commands: Mac example - record your process in your README:
-
-```bash
-python3 -m venv .venv
-source .venv/bin/activate
-python3 -m pip install jupyterlab pandas matplotlib seaborn
-python3 -m pip freeze > requirements.txt
-```
+This project uses external packages, which are not included in the Python Standard Library - we must install them. 
+To keep our project separate from all other Python projects,
+we will create and manage a local project virtual environment.
+We'll install our packages into the local project virtual environment.
+For the recommended process with detailed steps and commands, see [PROJECT_VIRTUAL_ENV.md](PROJECT_VIRTUAL_ENV.md).
 
 ### 2. Project Start
 
